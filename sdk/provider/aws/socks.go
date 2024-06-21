@@ -22,7 +22,7 @@ func (p *Provider) createSocksFunction(functionName string) error {
 		FunctionName:  aws.String(functionName),
 		Code:          &types.FunctionCode{ZipFile: function.AwsSocksCodeZip},
 		Handler:       aws.String("main"),
-		Runtime:       types.RuntimeGo1x,
+		Runtime:       types.RuntimePython39,
 		MemorySize:    aws.Int32(128),
 		Architectures: []types.Architecture{types.ArchitectureX8664},
 		Timeout:       aws.Int32(900),
